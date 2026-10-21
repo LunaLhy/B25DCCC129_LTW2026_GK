@@ -73,6 +73,7 @@ tbody tr:hover { background: rgb(254, 249, 195); }
 
 .unpaid { color: orange; }
 
+.mobile .col-category, .mobile .col-date { display: none; }
 
 @media (max-width: 600px) {
   .app { padding: 8px; }
@@ -87,3 +88,4 @@ tbody tr:hover { background: rgb(254, 249, 195); }
   td button { display: block; width: 100%; margin: 0 0 6px 0; }
   form { max-width: 100%; }
 }
+

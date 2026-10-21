@@ -18,7 +18,13 @@ const AddExpense = ({ onAdd }) => {
       return;
     }
 
-    onAdd({ title: title.trim(), amount: Number(amount), category, date });
+    const money = Number(amount);
+    if (!Number.isInteger(money) || money < 1000 || money > 100000000) {
+      setMessage('Số tiền phải từ 1.000 đến 100.000.000');
+      return;
+    }
+
+    onAdd({ title: title.trim(), amount: money, category, date });
     navigate('/expenses', { replace: true });
   };
 

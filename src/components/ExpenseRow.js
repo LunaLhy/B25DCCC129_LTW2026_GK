@@ -7,8 +7,8 @@ const ExpenseRow = ({ expense, onDelete, onToggle }) => {
     <tr>
       <td><Link to={`/expenses/${id}`}>{title}</Link></td>
       <td>{formatMoney(amount)}</td>
-      <td>{category}</td>
-      <td>{date}</td>
+      <td className="col-category">{category}</td>
+      <td className="col-date">{date}</td>
       <td className={paid ? '' : 'unpaid'}>{paid ? 'Đã thanh toán' : 'Chưa thanh toán'}</td>
       <td>
         <button type="button" onClick={() => onToggle(id)}>
